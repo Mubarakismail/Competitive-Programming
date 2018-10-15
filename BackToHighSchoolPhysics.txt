@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <bits/stdc++.h>
+#include <algorithm>
+
+using namespace std;
+
+#define all(v) 			((v).begin()), ((v).end())
+#define allr(v)			((v).rbegin()), ((v).rend())
+#define sz(v) 			((int)((v).size()))
+const int mod = 1e9 + 7;
+
+typedef long long ll;
+
+void File()
+{
+	freopen("output.txt", "w", stdout);
+	freopen("input.txt", "r", stdin);
+}
+void fast()
+{
+	ios::sync_with_stdio(NULL);
+	cout.tie(NULL);
+	cin.tie(NULL);
+}
+const double pi = 2 * acos(0.0);
+const int nn = 1e6 + 4;
+const int oo = 0x3f3f3f3f;
+int main()
+{
+	fast();
+	ll x, y;
+	while (cin >> x >> y)
+	{
+		cout << 2 * x*y << endl;
+	}
+#if _DEBUG
+	system("pause");
+#endif
+	return 0;
+}
