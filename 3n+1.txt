@@ -1,0 +1,60 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <bits/stdc++.h>
+#include <algorithm>
+
+using namespace std;
+
+#define all(v) 			((v).begin()), ((v).end())
+#define allr(v)			((v).rbegin()), ((v).rend())
+#define sz(v) 			((int)((v).size()))
+const int mod = 1e9 + 7;
+
+typedef long long ll;
+
+void File()
+{
+	freopen("output.txt", "w", stdout);
+	freopen("input.txt", "r", stdin);
+}
+void fast()
+{
+	ios::sync_with_stdio(NULL);
+	cout.tie(NULL);
+	cin.tie(NULL);
+}
+const double pi = 2 * acos(0.0);
+const int nn = 1e6 + 4;
+const int oo = 0x3f3f3f3f;
+ll solve(ll x)
+{
+	ll cnt = 0;
+	while (x>1)
+	{
+		if (x & 1)
+			x = 3 * x + 1;
+		else
+			x /= 2;
+		cnt++;
+	}
+	return cnt;
+}
+int main()
+{
+	fast();
+	ll x, y;
+	while (scanf("%lld%lld", &x, &y)!=EOF)
+	{
+		ll mx = -oo;
+		
+		printf("%lld %lld ", x, y);
+		if (y < x)
+			swap(x, y);
+		for (ll i = x; i <= y; i++)
+			mx = max(mx, solve(i));
+		printf("%lld\n", mx + 1);
+	}
+#if _DEBUG
+	system("pause");
+#endif
+	return 0;
+}
