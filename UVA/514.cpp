@@ -28,7 +28,6 @@ void fast()
 	//freopen("output.txt", "w", stdout);
 	freopen("path.in", "r", stdin);
 	#endif*/
-	
 }
 const double pi = 2 * acos(0.0);
 const ll oo = 0x3f3f3f3f;
